@@ -1,3 +1,4 @@
+/* Body Default setting */
 body{
     margin: 0;
     padding: 0;
@@ -5,7 +6,7 @@ body{
     background-color: white;
     box-sizing: border-box;
 }
-
+/* logo Design & image design  */
 .logo{
     display: flex;
     justify-content: center;
@@ -18,7 +19,7 @@ body{
     border-radius: 50%;
 
 }
-
+/* NavBar design */
 nav ul{
     display: flex;
     justify-content: space-around;
@@ -50,4 +51,153 @@ nav ul li a:hover{
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+/* Main content 1 design */
+.ContentOne{
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 50vh;
+    color: black;
+    justify-content: center;
+    
+}
 
+.Search{
+    text-align: justify;
+    align-self: center;
+    padding: 30px;
+    margin: 30px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    width: 50%;
+    font-size: 18px;
+}
+
+.SearchButton{
+    padding: 10px 20px;
+    background-color:#FF71CD;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+
+}
+
+.BookImage{
+    width: 50%;  
+    margin-right: 10px;
+
+}
+
+.BookImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    filter: contrast(180%);
+}
+
+.autherOfWebsite{
+    /* width: 100%;; */
+    height: 50vh;
+    background-color: white;
+    margin: 20px 50px 10px 50px;
+}
+
+.autherOfWebsite h1{
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #FF71CD;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+    line-height: 1.2;
+    border-radius: 5px;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* background-color: #ECFFE6;    */
+    transition: background-color 0.3s ease;
+    cursor: text;
+    transform: translateY(-5px);
+}
+
+.autherOfWebsite h1:hover{
+    background-color: #FF71CD;
+    color: white;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transform: translateY(0px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transform: translateY(-5px);
+}
+
+.autherOfWebsite .paragraph{
+    font-size: 18px;
+    text-align: justify;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #6C757D;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    padding: 20px;
+    background-color: white;  
+}
+
+/* Book Details design */
+.allBooks {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.book-details {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.book-cover {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+h2 {
+    color: #333;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.publisher, .author, .description, .price {
+    color: #555;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.add-to-cart {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.add-to-cart:hover {
+    background-color: #218838;
+}
