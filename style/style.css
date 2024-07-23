@@ -1,26 +1,28 @@
 /* Body Default setting */
-body{
+body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
     background-color: white;
     box-sizing: border-box;
 }
+
 /* logo Design & image design  */
-.logo{
+.logo {
     display: flex;
     justify-content: center;
 }
 
-.logo img{
+.logo img {
     padding-top: 10px;
     width: 150px;
     height: auto;
     border-radius: 50%;
 
 }
+
 /* NavBar design */
-nav ul{
+nav ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -28,21 +30,22 @@ nav ul{
     background-color: #ECFFE6;
 }
 
-nav ul li a{
+nav ul li a {
     color: blue;
     text-decoration: none;
     padding: 10px;
     margin: 10px;
     font-size: bold;
 }
-nav ul li{
+
+nav ul li {
     list-style: none;
     font-size: 18px;
     transition: color 0.3s ease;
     cursor: pointer;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
     color: black;
     background-color: #FF71CD;
     transition: background-color 0.3s ease;
@@ -52,17 +55,17 @@ nav ul li a:hover{
 }
 
 /* Main content 1 design */
-.ContentOne{
+.ContentOne {
     display: flex;
     overflow: hidden;
     width: 100%;
     height: 50vh;
     color: black;
     justify-content: center;
-    
+
 }
 
-.Search{
+.Search {
     text-align: justify;
     align-self: center;
     padding: 30px;
@@ -74,9 +77,9 @@ nav ul li a:hover{
     font-size: 18px;
 }
 
-.SearchButton{
+.SearchButton {
     padding: 10px 20px;
-    background-color:#FF71CD;
+    background-color: #FF71CD;
     color: black;
     border: none;
     border-radius: 5px;
@@ -85,13 +88,13 @@ nav ul li a:hover{
 
 }
 
-.BookImage{
-    width: 50%;  
+.BookImage {
+    width: 50%;
     margin-right: 10px;
 
 }
 
-.BookImage img{
+.BookImage img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -99,14 +102,14 @@ nav ul li a:hover{
     filter: contrast(180%);
 }
 
-.autherOfWebsite{
+.autherOfWebsite {
     /* width: 100%;; */
     height: 50vh;
     background-color: white;
     margin: 20px 50px 10px 50px;
 }
 
-.autherOfWebsite h1{
+.autherOfWebsite h1 {
     font-size: 30px;
     margin-bottom: 10px;
     font-weight: bold;
@@ -124,7 +127,7 @@ nav ul li a:hover{
     transform: translateY(-5px);
 }
 
-.autherOfWebsite h1:hover{
+.autherOfWebsite h1:hover {
     background-color: #FF71CD;
     color: white;
     transition: background-color 0.3s ease;
@@ -136,7 +139,7 @@ nav ul li a:hover{
     transform: translateY(-5px);
 }
 
-.autherOfWebsite .paragraph{
+.autherOfWebsite .paragraph {
     font-size: 18px;
     text-align: justify;
     text-align: center;
@@ -145,39 +148,50 @@ nav ul li a:hover{
     letter-spacing: 1px;
     line-height: 1.5;
     padding: 20px;
-    background-color: white;  
+    background-color: white;
 }
 
 /* Book Details design */
-.allBooks {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+
+.book-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    overflow: hidden;
+    width: 100%;
+    /* This ensures the grid is centered and within the screen width */
 }
 
 .book-details {
+    position: relative;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 300px;
+    overflow: hidden;
+    /* This ensures the element does not overflow its container */
     text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .book-cover {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    display: block;
+}
+
+.book-details:hover {
+    transform: scale(1.03);
+    /* Slightly reduced scale factor */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.book-info {
+    padding: 20px;
 }
 
 h2 {
     color: #333;
-    font-size: 24px;
+    font-size: 20px;
     margin: 10px 0;
 }
 
@@ -188,6 +202,9 @@ h2 {
 }
 
 .add-to-cart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
     background-color: #28a745;
     color: white;
     border: none;
@@ -195,9 +212,48 @@ h2 {
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
-    margin-top: 15px;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .add-to-cart:hover {
     background-color: #218838;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .book-info {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .publisher, .author, .description, .price {
+        font-size: 12px;
+    }
+
+    .add-to-cart {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .book-info {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    .publisher, .author, .description, .price {
+        font-size: 10px;
+    }
+
+    .add-to-cart {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
 }
